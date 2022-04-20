@@ -1,5 +1,8 @@
 name: GitHub Actions Demo
-on: [push]
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '45 13 * * *'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
